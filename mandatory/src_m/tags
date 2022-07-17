@@ -1,0 +1,36 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+add_sib_last	philo_creator.c	/^int add_sib_last(t_philo **philo, int id, t_data *data)$/;"	f	typeref:typename:int
+all_eaten	simulation_stopper.c	/^int	all_eaten(t_philo *philo, int n_eat)$/;"	f	typeref:typename:int
+create_philo	philo_creator.c	/^t_philo	*create_philo(int id, t_data *data)$/;"	f	typeref:typename:t_philo *
+create_threads	threader.c	/^int	create_threads(t_data *data, pthread_t **th)$/;"	f	typeref:typename:int
+digitize	parser.c	/^int digitize(UINT (*t)[5],char **av)$/;"	f	typeref:typename:int
+eat	routine.c	/^int	eat(t_philo *philo)$/;"	f	typeref:typename:int
+eat_sup_die	routine_utils.c	/^void	eat_sup_die(t_philo *philo)$/;"	f	typeref:typename:void
+fill_philo_list	philo_creator.c	/^int fill_philo_list(t_philo **philo, t_data *data, UINT num_p)$/;"	f	typeref:typename:int
+free_all	utils.c	/^void	free_all(pthread_t **th, t_data *data, t_philo **philo)$/;"	f	typeref:typename:void
+free_philo	philo_creator.c	/^void	free_philo(t_philo **philo, int n_phil)$/;"	f	typeref:typename:void
+ft_strncmp	simulation_stopper.c	/^int ft_strncmp(char *s1, char *s2, size_t n)$/;"	f	typeref:typename:int
+get_message	printer.c	/^void	get_message(t_philo *philo, char *str)$/;"	f	typeref:typename:void
+get_timestamp	printer.c	/^UINT	get_timestamp(struct timeval t_launch)$/;"	f	typeref:typename:UINT
+handle_one	routine.c	/^void	handle_one(t_philo *philo)$/;"	f	typeref:typename:void
+init_data	main.c	/^void	init_data(UINT t[5], t_data *data)$/;"	f	typeref:typename:void
+init_mutexes	threader.c	/^int	init_mutexes(t_data *data, pthread_t **th)$/;"	f	typeref:typename:int
+is_any_p_dead	simulation_stopper.c	/^int	is_any_p_dead(t_philo *philo)$/;"	f	typeref:typename:int
+len_tab	parser.c	/^int len_tab(char **tab)$/;"	f	typeref:typename:int
+main	main.c	/^int main(int argc, char **argv)$/;"	f	typeref:typename:int
+make_it_circle	philo_creator.c	/^void make_it_circle(t_philo **philo)$/;"	f	typeref:typename:void
+malmutex_error	threader.c	/^int	malmutex_error(t_data *data, pthread_t **th, int err, int i)$/;"	f	typeref:typename:int
+phil_atoi	parser.c	/^int phil_atoi(char *str, UINT *val_to_fill)$/;"	f	typeref:typename:int
+putstr_error	parser.c	/^int putstr_error(char *error)$/;"	f	typeref:typename:int
+routine	routine.c	/^void	*routine(void *args)$/;"	f	typeref:typename:void *
+stop_simulation	simulation_stopper.c	/^int	stop_simulation(t_philo *philo, int n_eat, char *str)$/;"	f	typeref:typename:int
+sub_threader	threader.c	/^int	sub_threader(pthread_t *th, t_philo **philo)$/;"	f	typeref:typename:int
+there_is_blood	simulation_stopper.c	/^int	there_is_blood(t_philo *philo, char *str)$/;"	f	typeref:typename:int
+think	routine.c	/^int	think(t_philo *philo)$/;"	f	typeref:typename:int
+threader	threader.c	/^int	threader(t_data *data, t_philo **philo)$/;"	f	typeref:typename:int

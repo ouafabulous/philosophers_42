@@ -1,0 +1,73 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   simulation_stopper.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: omoudni <omoudni@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/17 01:05:05 by omoudni           #+#    #+#             */
+/*   Updated: 2022/07/17 03:34:11 by omoudni          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../includes_m/philo.h"
+
+int	is_any_p_dead(t_philo *philo)
+{
+	pthread_mutex_lock(&((philo->data->sdrei)[1]));
+	if (philo->data->state)
+	{
+		pthread_mutex_unlock(&((philo->data->sdrei)[1]));
+		return (1);
+	}
+	pthread_mutex_unlock(&((philo->data->sdrei)[1]));
+	return (0);
+}
+
+int	there_is_blood(t_philo *philo)
+{
+	UINT	delay;
+
+	if (is_any_p_dead(philo))
+		return (2);
+	if (philo->has_eaten)
+		delay = get_timestamp(philo->lm_time);
+	else
+		delay = get_timestamp(philo->data->t_launch);
+	if (delay >= philo->data->t_die)
+	{
+		pthread_mutex_lock(&((philo->data->sdrei)[1]));
+		if (!philo->data->state)
+		{
+			philo->data->state = 2;
+			get_message(philo, "is dead");
+			pthread_mutex_unlock(&((philo->data->sdrei)[1]));
+			return (1);
+		}
+		if (philo->data->state)
+			return (pthread_mutex_unlock(&((philo->data->sdrei)[1])), 2);
+		pthread_mutex_unlock(&((philo->data->sdrei)[1]));
+	}
+	return (0);
+}
+
+int	all_eaten(t_philo *philo, int n_eat)
+{
+	if (n_eat == -1)
+		return (0);
+	pthread_mutex_lock(&((philo->data->sdrei)[3]));
+	if(philo->data->all_eaten == philo->data->n_phil)
+	{
+		pthread_mutex_unlock(&((philo->data->sdrei)[3]));
+		return (1);
+	}
+	pthread_mutex_unlock(&((philo->data->sdrei)[3]));
+	return (0);
+}
+
+int	stop_simulation(t_philo *philo, int n_eat)
+{
+	if (all_eaten(philo, n_eat) || there_is_blood(philo))
+		return(1);
+	return (0);
+}

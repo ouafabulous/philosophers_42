@@ -6,7 +6,7 @@
 /*   By: omoudni <omoudni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 15:38:43 by omoudni           #+#    #+#             */
-/*   Updated: 2022/07/18 04:42:07 by omoudni          ###   ########.fr       */
+/*   Updated: 2022/07/18 16:19:24 by omoudni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	init_data(UINT t[5], t_data *data, char **argv)
 	if (!data->n_phil)
 		return (1);
 	data->t_die = t[1];
+	if (!data->t_die)
+		return (1);
 	data->t_eat = t[2];
 	data->t_sleep = t[3];
 	data->t_think = t[1] - (t[2] + t[3]);
@@ -46,9 +48,9 @@ int main(int argc, char **argv)
 	if (argc >= 5 && argc <= 6)
 	{
 		if (digitize(&t, argv))
-			return (putstr_error("Make sure the values introduced are unsigned, non-negative integers!\n"));
+			return (putstr_error("Make sure the values introduced are non-negative integers!\n"));
 		if (init_data(t, &data, argv))
-			return (putstr_error("No simulation in case of a null number_philo or null number_meals\n"));
+			return (putstr_error("No simulation in case of one of these args is null: number_philos, time_to_die, number_times_to _eat\n"));
 		threader(&data, &philo);
 	}
 	else

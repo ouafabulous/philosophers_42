@@ -6,7 +6,7 @@
 /*   By: omoudni <omoudni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 18:10:55 by omoudni           #+#    #+#             */
-/*   Updated: 2022/07/18 18:26:48 by omoudni          ###   ########.fr       */
+/*   Updated: 2022/07/18 19:24:12 by omoudni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@ void	*handle_one(t_philo *philo)
 {
 	if (!philo->data->t_die
 		|| get_timestamp(philo->data->t_launch) >= philo->data->t_die)
-		get_message(philo, "died", 0);
+		get_message(philo, DIE, 0);
 	else
 	{
-		get_message(philo, "has taken a fork", 0);
+		get_message(philo, TAKE_FORK, 0);
 		usleep((philo->data->t_die
 				- get_timestamp(philo->data->t_launch)) * 1000);
-		get_message(philo, "died", 0);
+		get_message(philo, DIE, 0);
 	}
 	return (NULL);
 }
@@ -77,15 +77,15 @@ int	my_sleep(t_philo *philo)
 	diff = philo->data->t_die - get_timestamp(philo->lm_time);
 	if (diff <= philo->data->t_sleep)
 	{
-		if (get_message(philo, "is sleeping", 0))
+		if (get_message(philo, SLEEP, 0))
 			return (1);
 		usleep(diff * 1000 - 20);
-		get_message(philo, "is dead", 0);
+		get_message(philo, DIE, 0);
 		return (1);
 	}
 	else
 	{
-		if (get_message(philo, "is sleeping", 0))
+		if (get_message(philo, SLEEP, 0))
 			return (1);
 		usleep(philo->data->t_sleep * 1000 - 10);
 	}

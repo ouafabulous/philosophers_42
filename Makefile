@@ -6,7 +6,7 @@
 #    By: omoudni <omoudni@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/04 19:30:49 by omoudni           #+#    #+#              #
-#    Updated: 2022/07/17 23:26:10 by omoudni          ###   ########.fr        #
+#    Updated: 2022/07/18 06:47:23 by omoudni          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,7 @@ PHILO = philo
 
 CC = gcc -pthread
 
-CFLAGS = -Werror -Wextra -Wall -g3
+CFLAGS = -Werror -Wextra -Wall -g #-fsanitize=thread
 
 CPPFLAGS_M = -I$(INC_DIR_M)
 

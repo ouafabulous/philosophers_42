@@ -6,7 +6,7 @@
 /*   By: omoudni <omoudni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 19:27:15 by omoudni           #+#    #+#             */
-/*   Updated: 2022/07/16 19:39:30 by omoudni          ###   ########.fr       */
+/*   Updated: 2022/07/18 04:30:21 by omoudni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,7 @@ int digitize(UINT (*t)[5],char **av)
 			return (1);
 		i++;
 	}
-	if (len == 4)
-		(*t)[4] = -1;
-	else if (len == 5)
+	if (len == 5)
 		if (phil_atoi(av[i + 1], &((*t)[i])))
 			return (1);
 	return (0);

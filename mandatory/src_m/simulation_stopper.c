@@ -6,7 +6,7 @@
 /*   By: omoudni <omoudni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 01:05:05 by omoudni           #+#    #+#             */
-/*   Updated: 2022/07/17 23:27:10 by omoudni          ###   ########.fr       */
+/*   Updated: 2022/07/18 07:49:00 by omoudni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	there_is_blood(t_philo *philo, char *str)
 		delay = get_timestamp(philo->lm_time);
 	else
 		delay = get_timestamp(philo->data->t_launch);
-	if (!ft_strncmp(str, "is dead", 7) || delay >= philo->data->t_die)
+	if (!ft_strncmp(str, "is dead", 7) || delay  >= philo->data->t_die + 5)
 	{
 		pthread_mutex_lock(&((philo->data->sdrei)[1]));
 		if (philo->data->state)

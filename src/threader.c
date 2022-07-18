@@ -6,11 +6,11 @@
 /*   By: omoudni <omoudni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 15:54:49 by omoudni           #+#    #+#             */
-/*   Updated: 2022/07/18 06:22:19 by omoudni          ###   ########.fr       */
+/*   Updated: 2022/07/18 18:36:17 by omoudni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes_m/philo.h"
+#include "../includes/philo.h"
 
 int	create_threads(t_data *data, pthread_t **th)
 {
@@ -29,7 +29,7 @@ int	malmutex_error(t_data *data, pthread_t **th, int err, int i)
 	if (err == 3)
 	{
 		while (++j < i)
-				pthread_mutex_destroy(&(data->mut)[j]);
+			pthread_mutex_destroy(&(data->mut)[j]);
 		free(data->sdrei);
 	}
 	if (err == 2 || err == 3)
@@ -75,7 +75,8 @@ int	sub_threader(pthread_t *th, t_philo **philo)
 	while (++i < (*philo)->data->n_phil)
 	{
 		if (pthread_create(&(th[i]), NULL, &routine, *philo))
-			return (pthread_mutex_unlock(&((*philo)->data->sdrei)[2]), putstr_error("Error!\n"));
+			return (pthread_mutex_unlock(&((*philo)->data->sdrei)[2])
+				, putstr_error("Error!\n"));
 		(*philo) = (*philo)->next;
 	}
 	gettimeofday(&((*philo)->data->t_launch), NULL);

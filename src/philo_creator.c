@@ -6,12 +6,11 @@
 /*   By: omoudni <omoudni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 16:48:14 by omoudni           #+#    #+#             */
-/*   Updated: 2022/07/18 04:20:37 by omoudni          ###   ########.fr       */
+/*   Updated: 2022/07/18 18:35:34 by omoudni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes_m/philo.h"
-
+#include "../includes/philo.h"
 
 void	free_philo(t_philo **philo, int n_phil)
 {
@@ -37,7 +36,7 @@ void	free_philo(t_philo **philo, int n_phil)
 
 t_philo	*create_philo(int id, t_data *data)
 {
-	t_philo *ret;
+	t_philo	*ret;
 
 	ret = (t_philo *)malloc(sizeof(t_philo));
 	if (!ret)
@@ -50,9 +49,9 @@ t_philo	*create_philo(int id, t_data *data)
 	return (ret);
 }
 
-int add_sib_last(t_philo **philo, int id, t_data *data)
+int	add_sib_last(t_philo **philo, int id, t_data *data)
 {
-	t_philo *tmp;
+	t_philo	*tmp;
 
 	tmp = *philo;
 	while (tmp->next)
@@ -66,9 +65,9 @@ int add_sib_last(t_philo **philo, int id, t_data *data)
 	return (0);
 }
 
-void make_it_circle(t_philo **philo)
+void	make_it_circle(t_philo **philo)
 {
-	t_philo *tmp;
+	t_philo	*tmp;
 
 	if (!philo || !*philo)
 		return ;
@@ -78,9 +77,9 @@ void make_it_circle(t_philo **philo)
 	tmp->next = *philo;
 }
 
-int fill_philo_list(t_philo **philo, t_data *data, UINT num_p)
+int	fill_philo_list(t_philo **philo, t_data *data, UINT num_p)
 {
-	UINT i;
+	UINT	i;
 
 	i = 0;
 	while (i < num_p)

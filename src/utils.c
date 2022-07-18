@@ -6,11 +6,11 @@
 /*   By: omoudni <omoudni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 17:32:05 by omoudni           #+#    #+#             */
-/*   Updated: 2022/07/16 21:14:14 by omoudni          ###   ########.fr       */
+/*   Updated: 2022/07/18 16:39:43 by omoudni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes_m/philo.h"
+#include "../includes/philo.h"
 
 void	free_all(pthread_t **th, t_data *data, t_philo **philo)
 {

@@ -6,15 +6,15 @@
 /*   By: omoudni <omoudni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 19:27:15 by omoudni           #+#    #+#             */
-/*   Updated: 2022/07/18 16:18:57 by omoudni          ###   ########.fr       */
+/*   Updated: 2022/07/18 18:37:10 by omoudni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes_m/philo.h"
+#include "../includes/philo.h"
 
-int len_tab(char **tab)
+int	len_tab(char **tab)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (tab[i])
@@ -22,7 +22,7 @@ int len_tab(char **tab)
 	return (i);
 }
 
-int putstr_error(char *error)
+int	putstr_error(char *error)
 {
 	if (error)
 		while (*error)
@@ -30,7 +30,7 @@ int putstr_error(char *error)
 	return (1);
 }
 
-int digitize(UINT (*t)[5],char **av)
+int	digitize(UINT (*t)[5], char **av)
 {
 	int	i;
 	int	len;
@@ -49,12 +49,12 @@ int digitize(UINT (*t)[5],char **av)
 	return (0);
 }
 
-int phil_atoi(char *str, UINT *val_to_fill)
+int	phil_atoi(char *str, UINT *val_to_fill)
 {
-	long unsigned int res;
-	int i;
-	int len;
-	int start;
+	long unsigned int	res;
+	int					i;
+	int					len;
+	int					start;
 
 	res = 0;
 	i = 0;
@@ -75,6 +75,5 @@ int phil_atoi(char *str, UINT *val_to_fill)
 	}
 	if (len > 10 || res > UIMAX)
 		return (1);
-	(*val_to_fill) = (UINT)res;
-	return (0);
+	return ((*val_to_fill) = (UINT)res, 0);
 }

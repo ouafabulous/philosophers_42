@@ -6,7 +6,7 @@
 /*   By: omoudni <omoudni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 15:40:57 by omoudni           #+#    #+#             */
-/*   Updated: 2022/07/18 02:31:42 by omoudni          ###   ########.fr       */
+/*   Updated: 2022/07/18 18:25:05 by omoudni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@
 # define UINT unsigned int
 # define PMT pthread_mutex_t
 # define UIMAX 4294967295
+# define ERR_ARGS_1 "Only non-negative integers accepted\n"
+# define ERR_ARGS_2 "One of these args is null: number_philos, time_to_die, number_times_to _eat\n"
+# define ERR_ARGS_3 "You are not giving the right number of arguments (4 or 5)!\n"
 
 typedef struct s_data
 {
@@ -85,6 +88,17 @@ void	*routine(void *args);
 
 //---------------------routine_utils.c----------------------------------------------------------
 int		eat_sup_die(t_philo *philo);
+int		think_1(t_philo *philo);
+int		think_2(t_philo *philo);
+int		rout_check(t_philo *philo);
+
+//---------------------eat_tutils.c----------------------------------------------------------
+int		eat_even_1(t_philo *philo);
+int		eat_even(t_philo *philo);
+void	eat_odd1(t_philo *philo);
+int		eat_odd2(t_philo *philo);
+int		eat_odd(t_philo *philo);
+
 //---------------------simulation_stopper.c----------------------------------------------------------
 int		ft_strncmp(char *s1, char *s2, size_t n);
 int		is_any_p_dead(t_philo *philo);

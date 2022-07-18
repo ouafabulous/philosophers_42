@@ -6,11 +6,11 @@
 /*   By: omoudni <omoudni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 01:05:05 by omoudni           #+#    #+#             */
-/*   Updated: 2022/07/18 07:49:00 by omoudni          ###   ########.fr       */
+/*   Updated: 2022/07/18 16:39:43 by omoudni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes_m/philo.h"
+#include "../includes/philo.h"
 
 int ft_strncmp(char *s1, char *s2, size_t n)
 {

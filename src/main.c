@@ -6,11 +6,11 @@
 /*   By: omoudni <omoudni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 15:38:43 by omoudni           #+#    #+#             */
-/*   Updated: 2022/07/18 16:19:24 by omoudni          ###   ########.fr       */
+/*   Updated: 2022/07/18 17:05:46 by omoudni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes_m/philo.h"
+#include "../includes/philo.h"
 
 int	init_data(UINT t[5], t_data *data, char **argv)
 {
@@ -38,7 +38,7 @@ int	init_data(UINT t[5], t_data *data, char **argv)
 	return (0);
 }
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	UINT	t[5];
 	t_data	data;
@@ -48,12 +48,12 @@ int main(int argc, char **argv)
 	if (argc >= 5 && argc <= 6)
 	{
 		if (digitize(&t, argv))
-			return (putstr_error("Make sure the values introduced are non-negative integers!\n"));
+			return (putstr_error(ERR_ARGS_1));
 		if (init_data(t, &data, argv))
-			return (putstr_error("No simulation in case of one of these args is null: number_philos, time_to_die, number_times_to _eat\n"));
+			return (putstr_error(ERR_ARGS_2));
 		threader(&data, &philo);
 	}
 	else
-		return (putstr_error("Make sure you are giving the right number of arguments (4 or 5)!\n"));
-	return 0;
+		return (putstr_error(ERR_ARGS_3));
+	return (0);
 }

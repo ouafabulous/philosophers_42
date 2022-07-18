@@ -6,19 +6,19 @@
 #    By: omoudni <omoudni@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/04 19:30:49 by omoudni           #+#    #+#              #
-#    Updated: 2022/07/18 06:47:23 by omoudni          ###   ########.fr        #
+#    Updated: 2022/07/18 18:23:44 by omoudni          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 define compiling_m
-	@echo -n "$(shell tput bold)$(shell tput setaf 3)Compiling - mandatory$1 $(shell tput sgr0)"
+	@echo -n "$(shell tput bold)$(shell tput setaf 3)Compiling$1 $(shell tput sgr0)"
 		@$(CC) $(CFLAGS) $(CPPFLAGS) -o $1 > /dev/null -c $2
 	@echo "$(shell tput bold)$(shell tput setaf 2)√$(shell tput sgr0)"
 endef
 
 define finishing_m
-	@echo -n "$(shell tput bold)$(shell tput setaf 2)Creating executable - mandatory$1 $(shell tput sgr0)"
+	@echo -n "$(shell tput bold)$(shell tput setaf 2)Creating executable$1 $(shell tput sgr0)"
 	@$(CC) $(CFLAGS) $(CPPFLAGS_M) $(OBJS_M) -o $1
 	@echo "$(shell tput bold)$(shell tput setaf 2)√$(shell tput sgr0)"
 endef
@@ -35,9 +35,9 @@ define fcleaning
 	@echo "$(shell tput bold)$(shell tput setaf 2)√$(shell tput sgr0)"
 endef
 
-SRC_DIR_M = mandatory/src_m/
-OBJ_DIR_M = mandatory/bin_m/
-INC_DIR_M = mandatory/includes_m/
+SRC_DIR_M = src/
+OBJ_DIR_M = bin/
+INC_DIR_M = includes/
 
 SRCS_M = main.c \
 		 parser.c \
@@ -48,6 +48,7 @@ SRCS_M = main.c \
 		 routine.c \
 		 routine_utils.c \
 		 simulation_stopper.c \
+		 eat_utils.c \
 
 OBJS_M = $(addprefix $(OBJ_DIR_M), $(SRCS_M:%.c=%.o))
 
@@ -55,7 +56,7 @@ PHILO = philo
 
 CC = gcc -pthread
 
-CFLAGS = -Werror -Wextra -Wall -g #-fsanitize=thread
+CFLAGS = -Werror -Wextra -Wall -g3
 
 CPPFLAGS_M = -I$(INC_DIR_M)
 

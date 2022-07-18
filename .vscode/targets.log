@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jul 18 07:55:08 2022
+# Make data base, printed on Mon Jul 18 18:24:00 2022
 
 # Variables
 
@@ -16,8 +16,6 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 ?F = $(notdir $?)
 # environment
 DESKTOP_SESSION = ubuntu
-# makefile (from 'Makefile', line 54)
-PHILO = philo
 # default
 .SHELLFLAGS := -c
 # environment
@@ -26,7 +24,7 @@ XDG_SESSION_CLASS = user
 XDG_SESSION_TYPE = x11
 # environment
 VSCODE_LOG_NATIVE = false
-# makefile (from 'Makefile', line 60)
+# makefile (from 'Makefile', line 61)
 CPPFLAGS_M = -I$(INC_DIR_M)
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
@@ -42,18 +40,18 @@ XMODIFIERS = @im=ibus
 CURDIR := /mnt/nfs/homes/omoudni/philosophers_42_V2
 # makefile
 SHELL = /bin/sh
-# environment
-GDM_LANG = en
+# makefile (from 'Makefile', line 55)
+PHILO = philo
 # environment
 VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/bin/code
-# makefile (from 'Makefile', line 58)
-CFLAGS = -Werror -Wextra -Wall -g 
+# makefile (from 'Makefile', line 59)
+CFLAGS = -Werror -Wextra -Wall -g3
 # environment
-JOURNAL_STREAM = 9:1104468
+JOURNAL_STREAM = 9:689298
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -69,15 +67,15 @@ MANDATORY_PATH = /usr/share/gconf/ubuntu.mandatory.path
 # environment
 XDG_DATA_DIRS = /usr/share/gnome:/usr/share/ubuntu:/mnt/nfs/homes/omoudni/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
 # makefile (from 'Makefile', line 39)
-OBJ_DIR_M = mandatory/bin_m/
+OBJ_DIR_M = bin/
 # environment
 DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/101608/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-MANAGERPID = 245716
+MANAGERPID = 155679
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/101608/vscode-ipc-f1dec143-cd97-4466-9277-b15614e3de33.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/101608/vscode-ipc-aea522fe-9e9b-4e90-9e90-8d101bcd65fa.sock
 # makefile (from 'Makefile', line 32)
 define fcleaning
 	@echo -n "$(shell tput bold)$(shell tput setaf 8)Fcleaning $1 $(shell tput sgr0)"
@@ -87,9 +85,9 @@ endef
 # environment
 VSCODE_CWD = /mnt/nfs/homes/omoudni/philosophers_42_V2
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session8
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session2
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_101608_w50AXj
+KRB5CCNAME = FILE:/tmp/krb5cc_101608_1cA2RF
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -99,7 +97,7 @@ GPG_AGENT_INFO = /run/user/101608/gnupg/S.gpg-agent:0:1
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
-SESSION_MANAGER = local/e1r5p21.clusters.42paris.fr:@/tmp/.ICE-unix/246244,unix/e1r5p21.clusters.42paris.fr:/tmp/.ICE-unix/246244
+SESSION_MANAGER = local/e1r4p11.clusters.42paris.fr:@/tmp/.ICE-unix/156195,unix/e1r4p11.clusters.42paris.fr:/tmp/.ICE-unix/156195
 # environment
 XDG_RUNTIME_DIR = /run/user/101608
 # environment
@@ -109,7 +107,7 @@ VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 3256beadaeec45e39650c749c83faa12
+INVOCATION_ID = 3d1ae820df5546d781c0fd96db97217b
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -123,7 +121,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/101608/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 261399
+GIO_LAUNCHED_DESKTOP_FILE_PID = 157110
 # automatic
 %F = $(notdir $%)
 # environment
@@ -140,16 +138,16 @@ endef
 PWD = /mnt/nfs/homes/omoudni/philosophers_42_V2
 # makefile (from 'Makefile', line 20)
 define finishing_m
-	@echo -n "$(shell tput bold)$(shell tput setaf 2)Creating executable - mandatory$1 $(shell tput sgr0)"
+	@echo -n "$(shell tput bold)$(shell tput setaf 2)Creating executable$1 $(shell tput sgr0)"
 	@$(CC) $(CFLAGS) $(CPPFLAGS_M) $(OBJS_M) -o $1
 	@echo "$(shell tput bold)$(shell tput setaf 2)√$(shell tput sgr0)"
 endef
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 246207
+SSH_AGENT_PID = 156153
 # makefile (from 'Makefile', line 40)
-INC_DIR_M = mandatory/includes_m/
+INC_DIR_M = includes/
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -181,14 +179,14 @@ COLORTERM = truecolor
 # default
 MAKE = $(MAKE_COMMAND)
 # makefile (from 'Makefile', line 42)
-SRCS_M = main.c parser.c threader.c philo_creator.c utils.c printer.c routine.c routine_utils.c simulation_stopper.c 
+SRCS_M = main.c parser.c threader.c philo_creator.c utils.c printer.c routine.c routine_utils.c simulation_stopper.c eat_utils.c 
 # default
 MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # environment
 SHLVL = 2
-# makefile (from 'Makefile', line 56)
+# makefile (from 'Makefile', line 57)
 CC = gcc -pthread
 # environment
 IM_CONFIG_PHASE = 1
@@ -209,15 +207,13 @@ LESS = -R
 # default
 MAKE_COMMAND := make
 # environment
-OLDPWD = /mnt/nfs/homes/omoudni/philosophers_42_V2/mandatory
+OLDPWD = /mnt/nfs/homes/omoudni
 # environment
 TERMINATOR_DBUS_PATH = /net/tenshu/Terminator2
 # default
 .VARIABLES := 
 # automatic
 *F = $(notdir $*)
-# environment
-LANGUAGE = en
 # environment
 XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
 # environment
@@ -241,7 +237,7 @@ DEFAULTS_PATH = /usr/share/gconf/ubuntu.default.path
 # default
 MAKEFILES := 
 # makefile (from 'Makefile', line 38)
-SRC_DIR_M = mandatory/src_m/
+SRC_DIR_M = src/
 # automatic
 <F = $(notdir $<)
 # environment
@@ -262,11 +258,11 @@ CHROME_DESKTOP = code-url-handler.desktop
 GJS_DEBUG_OUTPUT = stderr
 # default
 .RECIPEPREFIX := 
-# makefile (from 'Makefile', line 52)
+# makefile (from 'Makefile', line 53)
 OBJS_M = $(addprefix $(OBJ_DIR_M), $(SRCS_M:%.c=%.o))
 # makefile (from 'Makefile', line 14)
 define compiling_m
-	@echo -n "$(shell tput bold)$(shell tput setaf 3)Compiling - mandatory$1 $(shell tput sgr0)"
+	@echo -n "$(shell tput bold)$(shell tput setaf 3)Compiling$1 $(shell tput sgr0)"
 		@$(CC) $(CFLAGS) $(CPPFLAGS) -o $1 > /dev/null -c $2
 	@echo "$(shell tput bold)$(shell tput setaf 2)√$(shell tput sgr0)"
 endef
@@ -279,29 +275,29 @@ TERMINATOR_DBUS_NAME = net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873
 # environment
 DOCKER_HOST = unix:///run/user/101608/docker.sock
 # environment
-VSCODE_PID = 267199
+VSCODE_PID = 165280
 # environment
-TERMINATOR_UUID = urn:uuid:f3342e6a-d366-4e9e-9744-bef4a9c807e0
+TERMINATOR_UUID = urn:uuid:77df6f36-25c5-4039-b62a-16f7ab76a2e0
 # variable set hash-table stats:
-# Load=128/1024=12%, Rehash=0, Collisions=22/166=13%
- 
+# Load=126/1024=12%, Rehash=0, Collisions=18/186=10%
 
 # Pattern-specific Variable Values
 
 # No pattern-specific variable values.
+ 
 
 # Directories
 
-# . (device 55, inode 17399999): 7 files, no impossibilities.
-# mandatory/bin_m: could not be stat'd.
-# mandatory/src_m (device 55, inode 17410127): 4 files, no impossibilities so far.
+# . (device 57, inode 17399999): 10 files, no impossibilities.
+# bin (device 57, inode 17405391): No files, no impossibilities so far.
+# src (device 57, inode 17410127): 4 files, no impossibilities so far.
 
-# 11 files, no impossibilities in 3 directories.
+# 14 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
-mandatory/bin_m/%.o: mandatory/src_m/%.c | mandatory/bin_m/
-#  recipe to execute (from 'Makefile', line 71):
+bin/%.o: src/%.c | bin/
+#  recipe to execute (from 'Makefile', line 72):
 	$(call compiling_m, $@, $<)
 
 # 1 implicit rules, 0 (0.0%) terminal.
@@ -309,21 +305,24 @@ mandatory/bin_m/%.o: mandatory/src_m/%.c | mandatory/bin_m/
 # Files
 
 # Not a target:
-mandatory/bin_m/simulation_stopper.o:
+bin/routine.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-mandatory/bin_m/main.o: mandatory/src_m/main.c | mandatory/bin_m/
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'main'
-#  File does not exist.
+# Not a target:
+bin/threader.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+bin/:
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-18 16:40:12.071630666
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
-#  recipe to execute (from 'Makefile', line 71):
-	$(call compiling_m, $@, $<)
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 69):
+	@mkdir -p $(OBJ_DIR_M)
 
 all: philo
 #  Phony target (prerequisite of .PHONY).
@@ -333,16 +332,16 @@ all: philo
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+# Load=0/32=0%, Rehash=0, Collisions=0/26=0%
 
-philo: mandatory/bin_m/main.o mandatory/bin_m/parser.o mandatory/bin_m/threader.o mandatory/bin_m/philo_creator.o mandatory/bin_m/utils.o mandatory/bin_m/printer.o mandatory/bin_m/routine.o mandatory/bin_m/routine_utils.o mandatory/bin_m/simulation_stopper.o
+philo: bin/main.o bin/parser.o bin/threader.o bin/philo_creator.o bin/utils.o bin/printer.o bin/routine.o bin/routine_utils.o bin/simulation_stopper.o bin/eat_utils.o
 #  Implicit rule search has not been done.
-#  File does not exist.
+#  Last modified 2022-07-18 16:40:12.14263059
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
-#  recipe to execute (from 'Makefile', line 65):
+# Load=0/32=0%, Rehash=0, Collisions=0/26=0%
+#  recipe to execute (from 'Makefile', line 66):
 	$(call finishing_m, $(PHILO))
 
 .PHONY: all clean fclean re
@@ -351,13 +350,7 @@ philo: mandatory/bin_m/main.o mandatory/bin_m/parser.o mandatory/bin_m/threader.
 #  File has not been updated.
 
 # Not a target:
-mandatory/bin_m/philo_creator.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-.SUFFIXES:
+bin/utils.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -365,71 +358,39 @@ mandatory/bin_m/philo_creator.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-18 06:47:23.778634302
+#  Last modified 2022-07-18 18:23:44.693876588
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
-mandatory/bin_m/routine.o:
+bin/printer.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-
-# Not a target:
-mandatory/bin_m/threader.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-mandatory/bin_m/:
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: ''
-#  File does not exist.
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := mandatory/bin_m/
-# automatic
-# % := 
-# automatic
-# * := 
-# automatic
-# + := 
-# automatic
-# | := 
-# automatic
-# < := 
-# automatic
-# ^ := 
-# automatic
-# ? := 
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/12=8%
-#  recipe to execute (from 'Makefile', line 68):
-	@mkdir -p $(OBJ_DIR_M)
 
 fclean: clean
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 77):
+#  recipe to execute (from 'Makefile', line 78):
 	$(call fcleaning, $(PHILO))
 
 # Not a target:
-mandatory/bin_m/utils.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-mandatory/bin_m/printer.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/main.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-18 17:05:46.5460009
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 .DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+bin/parser.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -440,47 +401,79 @@ re: fclean all
 #  File does not exist.
 #  File has not been updated.
 
+# Not a target:
+bin/routine_utils.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
 clean:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 74):
+#  recipe to execute (from 'Makefile', line 75):
 	$(call cleaning, $(OBJ_DIR_M), $(OBJ_DIR_B))
 
 # Not a target:
-mandatory/bin_m/parser.o:
+bin/simulation_stopper.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-mandatory/bin_m/routine_utils.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-mandatory/src_m/main.c:
+bin/main.o: src/main.c | bin/
 #  Implicit rule search has been done.
-#  Last modified 2022-07-18 04:42:07.203566409
+#  Implicit/static pattern stem: 'main'
+#  Last modified 2022-07-18 16:40:11.379631405
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := bin/main.o
+# automatic
+# % := 
+# automatic
+# * := main
+# automatic
+# + := src/main.c
+# automatic
+# | := bin/
+# automatic
+# < := src/main.c
+# automatic
+# ^ := src/main.c
+# automatic
+# ? := src/main.c
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/36=3%
+#  recipe to execute (from 'Makefile', line 72):
+	$(call compiling_m, $@, $<)
+
+# Not a target:
+bin/eat_utils.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+bin/philo_creator.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # files hash-table stats:
-# Load=20/1024=2%, Rehash=0, Collisions=0/55=0%
+# Load=21/1024=2%, Rehash=0, Collisions=0/56=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 35 / storage = 513 B / avg = 14 B
-# current buf: size = 8162 B / used = 513 B / count = 35 / avg = 14 B
+# strcache buffers: 1 (0) / strings = 36 / storage = 352 B / avg = 9 B
+# current buf: size = 8162 B / used = 352 B / count = 36 / avg = 9 B
 
-# strcache performance: lookups = 62 / hit rate = 43%
+# strcache performance: lookups = 65 / hit rate = 44%
 # hash-table stats:
-# Load=35/8192=0%, Rehash=0, Collisions=2/62=3%
-# Finished Make data base on Mon Jul 18 07:55:08 2022
+# Load=36/8192=0%, Rehash=0, Collisions=2/65=3%
+# Finished Make data base on Mon Jul 18 18:24:00 2022
 
  

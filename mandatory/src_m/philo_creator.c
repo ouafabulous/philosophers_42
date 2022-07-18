@@ -6,7 +6,7 @@
 /*   By: omoudni <omoudni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 16:48:14 by omoudni           #+#    #+#             */
-/*   Updated: 2022/07/17 04:55:58 by omoudni          ###   ########.fr       */
+/*   Updated: 2022/07/18 04:20:37 by omoudni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ t_philo	*create_philo(int id, t_data *data)
 	ret->id = id;
 	ret->data = data;
 	ret->n_eaten = 0;
+	ret->thought = 0;
 	ret->next = NULL;
 	return (ret);
 }
@@ -68,7 +69,7 @@ int add_sib_last(t_philo **philo, int id, t_data *data)
 void make_it_circle(t_philo **philo)
 {
 	t_philo *tmp;
-	
+
 	if (!philo || !*philo)
 		return ;
 	tmp = *philo;
@@ -82,8 +83,6 @@ int fill_philo_list(t_philo **philo, t_data *data, UINT num_p)
 	UINT i;
 
 	i = 0;
-	if (!data->n_phil)
-				return (putstr_error("Error: the number of philos should be superior to 0 :)\n"));
 	while (i < num_p)
 	{
 		if (!*philo)

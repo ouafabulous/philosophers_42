@@ -6,7 +6,7 @@
 /*   By: omoudni <omoudni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 15:40:57 by omoudni           #+#    #+#             */
-/*   Updated: 2022/07/17 06:12:14 by omoudni          ###   ########.fr       */
+/*   Updated: 2022/07/18 02:31:42 by omoudni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ typedef	struct	s_philo
 unsigned int	id;
 struct timeval	lm_time;
 int				n_eaten;
+int				thought;
 t_data			*data;
 struct s_philo	*next;
 }				t_philo;
@@ -76,7 +77,7 @@ UINT	get_timestamp(struct timeval t_launch);
 int		get_message(t_philo *philo, char *str, int i);
 
 //---------------------routine.c----------------------------------------------------------
-void	handle_one(t_philo *philo);
+void	*handle_one(t_philo *philo);
 int		think(t_philo *philo);
 int		eat(t_philo *philo);
 int		my_sleep(t_philo *philo);

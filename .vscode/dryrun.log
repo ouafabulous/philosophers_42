@@ -1,6 +1,44 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/mnt/nfs/homes/omoudni/philo_final'
-make: Leaving directory '/mnt/nfs/homes/omoudni/philo_final'
+make: Entering directory '/mnt/nfs/homes/omoudni/philosophers_42_V2'
+mkdir -p mandatory/bin_m/
+echo -n "[1m[33mCompiling - mandatory mandatory/bin_m/main.o (B[m"
+gcc -pthread -Werror -Wextra -Wall -g3  -o  mandatory/bin_m/main.o > /dev/null -c  mandatory/src_m/main.c
+echo "[1m[32m√(B[m"
  
-make: *** No targets.  Stop.
-
+echo -n "[1m[33mCompiling - mandatory mandatory/bin_m/parser.o (B[m"
+gcc -pthread -Werror -Wextra -Wall -g3  -o  mandatory/bin_m/parser.o > /dev/null -c  mandatory/src_m/parser.c
+echo "[1m[32m√(B[m"
+ 
+echo -n "[1m[33mCompiling - mandatory mandatory/bin_m/threader.o (B[m"
+gcc -pthread -Werror -Wextra -Wall -g3  -o  mandatory/bin_m/threader.o > /dev/null -c  mandatory/src_m/threader.c
+echo "[1m[32m√(B[m"
+ 
+echo -n "[1m[33mCompiling - mandatory mandatory/bin_m/philo_creator.o (B[m"
+gcc -pthread -Werror -Wextra -Wall -g3  -o  mandatory/bin_m/philo_creator.o > /dev/null -c  mandatory/src_m/philo_creator.c
+echo "[1m[32m√(B[m"
+ 
+echo -n "[1m[33mCompiling - mandatory mandatory/bin_m/utils.o (B[m"
+gcc -pthread -Werror -Wextra -Wall -g3  -o  mandatory/bin_m/utils.o > /dev/null -c  mandatory/src_m/utils.c
+echo "[1m[32m√(B[m"
+ 
+echo -n "[1m[33mCompiling - mandatory mandatory/bin_m/printer.o (B[m"
+gcc -pthread -Werror -Wextra -Wall -g3  -o  mandatory/bin_m/printer.o > /dev/null -c  mandatory/src_m/printer.c
+echo "[1m[32m√(B[m"
+ 
+echo -n "[1m[33mCompiling - mandatory mandatory/bin_m/routine.o (B[m"
+gcc -pthread -Werror -Wextra -Wall -g3  -o  mandatory/bin_m/routine.o > /dev/null -c  mandatory/src_m/routine.c
+echo "[1m[32m√(B[m"
+ 
+echo -n "[1m[33mCompiling - mandatory mandatory/bin_m/routine_utils.o (B[m"
+gcc -pthread -Werror -Wextra -Wall -g3  -o  mandatory/bin_m/routine_utils.o > /dev/null -c  mandatory/src_m/routine_utils.c
+echo "[1m[32m√(B[m"
+ 
+echo -n "[1m[33mCompiling - mandatory mandatory/bin_m/simulation_stopper.o (B[m"
+gcc -pthread -Werror -Wextra -Wall -g3  -o  mandatory/bin_m/simulation_stopper.o > /dev/null -c  mandatory/src_m/simulation_stopper.c
+echo "[1m[32m√(B[m"
+ 
+echo -n "[1m[32mCreating executable - mandatory philo (B[m"
+gcc -pthread -Werror -Wextra -Wall -g3 -Imandatory/includes_m/ mandatory/bin_m/main.o mandatory/bin_m/parser.o mandatory/bin_m/threader.o mandatory/bin_m/philo_creator.o mandatory/bin_m/utils.o mandatory/bin_m/printer.o mandatory/bin_m/routine.o mandatory/bin_m/routine_utils.o mandatory/bin_m/simulation_stopper.o -o  philo
+echo "[1m[32m√(B[m"
+make: Leaving directory '/mnt/nfs/homes/omoudni/philosophers_42_V2'
+ 

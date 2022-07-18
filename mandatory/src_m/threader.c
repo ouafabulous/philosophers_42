@@ -6,7 +6,7 @@
 /*   By: omoudni <omoudni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 15:54:49 by omoudni           #+#    #+#             */
-/*   Updated: 2022/07/17 03:35:03 by omoudni          ###   ########.fr       */
+/*   Updated: 2022/07/17 22:28:24 by omoudni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,10 @@ int	threader(t_data *data, t_philo **philo)
 	while (++i < data->n_phil)
 	{
 		if (pthread_join(th[i], NULL))
+		{
+			printf("Problem!\n");
 			return (free_all(&th, data, philo), 1);
+		}
 	}
 	return (free_all(&th, data, philo), 0);
 }

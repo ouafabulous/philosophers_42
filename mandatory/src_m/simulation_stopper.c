@@ -6,7 +6,7 @@
 /*   By: omoudni <omoudni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 01:05:05 by omoudni           #+#    #+#             */
-/*   Updated: 2022/07/17 05:25:32 by omoudni          ###   ########.fr       */
+/*   Updated: 2022/07/17 23:27:10 by omoudni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int ft_strncmp(char *s1, char *s2, size_t n)
 {
+	if (!s1 || !s2)
+		return (-1);
 	while (n && *s1 && *s1 == *s2)
 	{
 		s1++;
@@ -54,9 +56,12 @@ int	there_is_blood(t_philo *philo, char *str)
 			return (pthread_mutex_unlock(&((philo->data->sdrei)[1])), 2);
 		else
 		{
+			// printf("I entered here with this philo_v2: %d\n", philo->id);
 			philo->data->state = 2;
-			get_message(philo, "is dead", 0);
 			pthread_mutex_unlock(&((philo->data->sdrei)[1]));
+			pthread_mutex_lock(&(philo->data->sdrei[0]));
+			printf("%u %d %s\n", get_timestamp(philo->data->t_launch), philo->id, "is dead");
+			pthread_mutex_unlock(&(philo->data->sdrei[0]));
 			return (1);
 		}
 		pthread_mutex_unlock(&((philo->data->sdrei)[1]));
@@ -80,7 +85,10 @@ int	all_eaten(t_philo *philo, int n_eat, int i)
 
 int	stop_simulation(t_philo *philo, int n_eat, char *str, int i)
 {
-	if (all_eaten(philo, n_eat, i) || there_is_blood(philo, str))
-		return(1);
+	if (philo->data->n_phil > 1)
+	{
+		if (all_eaten(philo, n_eat, i) || there_is_blood(philo, str))
+			return(1);
+	}
 	return (0);
 }

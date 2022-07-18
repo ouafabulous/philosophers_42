@@ -1,32 +1,6 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/mnt/nfs/homes/omoudni/philosophers_42_V2'
- 
-echo -n "[1m[33mCompiling bin/main.o (B[m"
-gcc -pthread -Werror -Wextra -Wall -g3  -o  bin/main.o > /dev/null -c  src/main.c
-echo "[1m[32m√(B[m"
- 
-echo -n "[1m[33mCompiling bin/printer.o (B[m"
-gcc -pthread -Werror -Wextra -Wall -g3  -o  bin/printer.o > /dev/null -c  src/printer.c
-echo "[1m[32m√(B[m"
- 
-echo -n "[1m[33mCompiling bin/routine.o (B[m"
-gcc -pthread -Werror -Wextra -Wall -g3  -o  bin/routine.o > /dev/null -c  src/routine.c
-echo "[1m[32m√(B[m"
- 
-echo -n "[1m[33mCompiling bin/routine_utils.o (B[m"
-gcc -pthread -Werror -Wextra -Wall -g3  -o  bin/routine_utils.o > /dev/null -c  src/routine_utils.c
-echo "[1m[32m√(B[m"
- 
-echo -n "[1m[33mCompiling bin/simulation_stopper.o (B[m"
-gcc -pthread -Werror -Wextra -Wall -g3  -o  bin/simulation_stopper.o > /dev/null -c  src/simulation_stopper.c
-echo "[1m[32m√(B[m"
- 
-echo -n "[1m[33mCompiling bin/eat_utils.o (B[m"
-gcc -pthread -Werror -Wextra -Wall -g3  -o  bin/eat_utils.o > /dev/null -c  src/eat_utils.c
-echo "[1m[32m√(B[m"
- 
-echo -n "[1m[32mCreating executable philo (B[m"
-gcc -pthread -Werror -Wextra -Wall -g3 -Iincludes/ bin/main.o bin/parser.o bin/threader.o bin/philo_creator.o bin/utils.o bin/printer.o bin/routine.o bin/routine_utils.o bin/simulation_stopper.o bin/eat_utils.o -o  philo
-echo "[1m[32m√(B[m"
 make: Leaving directory '/mnt/nfs/homes/omoudni/philosophers_42_V2'
  
+make: *** No targets specified and no makefile found.  Stop.
+

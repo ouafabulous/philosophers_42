@@ -6,7 +6,7 @@
 /*   By: omoudni <omoudni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 15:40:57 by omoudni           #+#    #+#             */
-/*   Updated: 2022/07/18 19:57:22 by omoudni          ###   ########.fr       */
+/*   Updated: 2022/07/18 20:37:22 by omoudni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 
 # define UINT unsigned int
 # define UIMAX 4294967295
-# define ERR_ARGS_1 "Only non-negative integers accepted\n"
-# define ERR_ARGS_2 "One of these is null: num_philos, t_to_die, num_to_eat\n"
+# define ERR_ARGS_1 "Only non-negative integers accepted!\n"
+# define ERR_ARGS_2 "One of these is null: num_philos, t_to_die, num_to_eat!\n"
 # define ERR_ARGS_3 "Please give the right number of arguments (4 or 5)!\n"
 # define TAKE_FORK "has taken a fork 🔱"
 # define EAT "is eating 🍕"

@@ -6,7 +6,7 @@
 /*   By: omoudni <omoudni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 03:50:42 by omoudni           #+#    #+#             */
-/*   Updated: 2022/07/18 19:45:27 by omoudni          ###   ########.fr       */
+/*   Updated: 2022/09/29 16:21:21 by omoudni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,7 @@ int	think_2(t_philo *philo)
 {
 	pthread_mutex_unlock(&((philo->data->sdrei)[4]));
 	if (get_message(philo, THINK, 0))
-	{
 		return (1);
-	}
-	if (philo->data->t_die - get_timestamp(philo->lm_time)
-		> (philo->data->t_eat - philo->data->t_sleep + 1) * 1000)
-		usleep((philo->data->t_eat - philo->data->t_sleep + 1) * 1000);
 	return (0);
 }
 
